@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My To Do list</title>
+</head>
+<body>
+	<h1>Appending List Items</h1>
+	<form id="form_">
+		<input type="text" id="input_" placeholder="enter the list entries">
+		<button type="button" onclick="myFunction()" id="button_">
+	 Click Here!</button>
+	 </form>
+	 <ul id="console"></ul>
+	 <script>
+	 	function myFunction()
+	 	{
+	 		var text=document.getElementById("input_").value;
+	 		if(text=="")
+	 	    	{alert("Your standard input is empty");}
+	 		else
+	 		{
+	 			var txt=document.createTextNode(text);
+	 		   var newItem=document.createElement("li");
+	 		   newItem.appendChild(txt);
+	 	       document.getElementById("console").appendChild(newItem);
+	 	    }
+	 }
+	 </script>
+</body>
+</html>
